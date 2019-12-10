@@ -17,9 +17,9 @@ public class TestConnexionJdbc {
 			 * */
 			ResourceBundle data = ResourceBundle.getBundle("database");
 			
-			String dbPath = data.getString("db.path");
-			String dbUsername = data.getString("db.username");
-			String dbPwd = data.getString("db.pwd");
+			String dbPath = data.getString("dbCC.path");
+			String dbUsername = data.getString("dbCC.username");
+			String dbPwd = data.getString("dbCC.pwd");
 		
 			/**Ouverture connection a la base de données
 			 * */
