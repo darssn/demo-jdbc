@@ -1,34 +1,20 @@
 package fr.diginamic.jdbc;
 
-import java.sql.Connection;
 
-import java.sql.SQLException;
-import java.sql.Statement;
+import fr.diginamic.jdbc.dao.FournisseurDaoJdbc;
+import fr.diginamic.jdbc.entites.Fournisseur;
 
 
 
 public class TestInsertion {
 
 	public static void main(String[] args)  {
-		// TODO Auto-generated method stub
-		Connection connect = Connectionbdd.newConnect();	
-		try {
-		
-		Statement st = connect.createStatement();
-		
-		st.executeUpdate("insert into fournisseur(ID,NOM) values (4,'La maison de la Peinture') ");
-		
-		connect.commit();			
-		st.close();
-		connect.close();
-			
-		} catch (SQLException e) {
-			System.out.println(e);
-		
-			
-		}
-		
 	
+		FournisseurDaoJdbc fournisseur = new FournisseurDaoJdbc();
+		
+		fournisseur.insert(new Fournisseur(4,"La maison de la peinture"));
+		fournisseur.insert(new Fournisseur(5,"L'Espace Création"));
+			
 
 	}
 

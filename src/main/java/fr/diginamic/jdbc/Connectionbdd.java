@@ -1,4 +1,5 @@
 package fr.diginamic.jdbc;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -6,7 +7,7 @@ import java.util.ResourceBundle;
 
 public class Connectionbdd {
 
-	static{
+	static {
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
@@ -15,9 +16,8 @@ public class Connectionbdd {
 		}
 	}
 
-	public static Connection newConnect(){
+	public static Connection newConnect() {
 
-		
 		Connection connect = null;
 		/**
 		 * Recuperation des données du ficher .properties
@@ -31,18 +31,17 @@ public class Connectionbdd {
 		/**
 		 * Ouverture connection a la base de données
 		 */
-	
-	try{
-			connect = DriverManager.getConnection(dbPath, dbUsername, dbPwd);
-			
-	}catch(SQLException e){
-		
-		System.out.println(e);
-	}
 
-		
+		try {
+			connect = DriverManager.getConnection(dbPath, dbUsername, dbPwd);
+
+		} catch (SQLException e) {
+
+			System.out.println(e);
+		}
+
 		return connect;
-		
+
 	}
 
 }
