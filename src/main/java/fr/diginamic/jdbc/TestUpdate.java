@@ -11,9 +11,9 @@ public class TestUpdate {
 		// TODO Auto-generated method stub	
 		
 		Connection connect = Connectionbdd.newConnect();
+		
 		try {
 	
-		
 			
 		Statement st = connect.createStatement();
 		

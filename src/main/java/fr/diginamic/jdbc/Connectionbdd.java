@@ -6,18 +6,18 @@ import java.util.ResourceBundle;
 
 public class Connectionbdd {
 
+	static{
+		try {
+			Class.forName("org.mariadb.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 	public static Connection newConnect(){
 
-		try {
-			Class.forName("org.mariadb.jdbc.Driver");
-		} catch (
-
-		ClassNotFoundException e) {
-			System.out.println(e);
-
-		}
-
+		
 		Connection connect = null;
 		/**
 		 * Recuperation des données du ficher .properties
