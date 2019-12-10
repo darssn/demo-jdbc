@@ -9,9 +9,11 @@ public class TestUpdate {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub	
+		
+		Connection connect = Connectionbdd.newConnect();
 		try {
 	
-		Connection connect = Connectionbdd.newConnect();		
+		
 			
 		Statement st = connect.createStatement();
 		

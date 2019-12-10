@@ -15,9 +15,10 @@ public class TestSelect {
 		
 		List<Fournisseur> listeFournisseur = new ArrayList<>();
 		
+		Connection connect = Connectionbdd.newConnect();
 		try{
 			
-		Connection connect = Connectionbdd.newConnect();
+		
 		
 		Statement st = connect.createStatement();
 		
@@ -39,7 +40,8 @@ public class TestSelect {
 		
 		}catch(SQLException e){
 			
-			
+			System.out.println(e);
+		
 		}
 		
 		for(Fournisseur f :listeFournisseur){
