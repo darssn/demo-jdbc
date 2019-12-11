@@ -37,7 +37,12 @@ public class FournisseurDaoJdbc implements FournisseurDao {
 			connect.close();
 
 		} catch (SQLException e) {
-
+			try {
+				connect.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			System.out.println(e);
 		}
 
@@ -69,7 +74,12 @@ public class FournisseurDaoJdbc implements FournisseurDao {
 			connect.close();
 
 		} catch (SQLException e) {
-
+			try {
+				connect.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			System.out.println(e);
 		}
 
@@ -95,7 +105,12 @@ public class FournisseurDaoJdbc implements FournisseurDao {
 			connect.close();
 
 		} catch (SQLException e) {
-
+			try {
+				connect.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			System.out.println(e);
 		}
 		
@@ -121,6 +136,12 @@ public class FournisseurDaoJdbc implements FournisseurDao {
 			connect.close();
 			
 		}catch(SQLException e){
+			try {
+				connect.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			System.out.println(e);
 			return false;
 		
